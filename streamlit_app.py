@@ -83,6 +83,6 @@ my_cur.execute("select * from fruit_load_list")
 
 
 fruit_add = streamlit.text_input('what fruit would you like to add ?', 'jackfruit')
-streamlit.write('Thanks for adding',fruit_add)
+streamlit.write('Thanks for adding ',fruit_add)
 #my_cur.execute(" insert into fruit_load_list values('kiwi')")
 
