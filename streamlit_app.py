@@ -38,10 +38,7 @@ def get_fruit_load_list():
             return my_cur.fetchall()
      
 #Add a button to load the fruit
-if streamlit.button('Get Fruit Load List'):
-     my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
-     my_data_rows = get_fruit_load_list()
-     streamlit.dataframe(my_data_rows) 
+
 
 try:
 
@@ -53,6 +50,11 @@ try:
       streamlit.dataframe(fruityvice_res)
 except URLError as e:
   streamlit.error()
+
+if streamlit.button('Get Fruit Load List'):
+     my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+     my_data_rows = get_fruit_load_list()
+     streamlit.dataframe(my_data_rows) 
 
 #display the table on the page 
 #streamlit.dataframe(my_fruit_list)
