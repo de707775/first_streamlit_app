@@ -34,6 +34,7 @@ streamlit.dataframe(fruityvice_normalized)
 
 #display the table on the page 
 #streamlit.dataframe(my_fruit_list)
+streamlit.stop()
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
