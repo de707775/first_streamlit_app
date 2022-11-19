@@ -29,4 +29,5 @@ streamlit.dataframe(fruityvice_normalized)
 
 #display the table on the page 
 #streamlit.dataframe(my_fruit_list)
+requirements.txt
 import snowflake.connector
